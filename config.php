@@ -1,5 +1,5 @@
 <?php
-$username = 'root';
+/* $username = 'root';
 $password = 'root';
 $dbName = 'test';
 $connectionName = getenv("bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server");
@@ -14,6 +14,13 @@ $dsn = sprintf(
 );
 
 // Connect to the database.
-$conn = new PDO($dsn, $username, $password, $conn_config);
+$conn = new PDO($dsn, $username, $password, $conn_config);*/
+
+$databaseHost = '34.101.142.207';
+$databaseName = 'test';
+$databaseUsername = 'root';
+$databasePassword = 'root';
+
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
  
 ?>
