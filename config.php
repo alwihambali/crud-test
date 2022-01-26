@@ -17,9 +17,9 @@
 // $conn = new PDO($dsn, $username, $password, $conn_config);
 
 $databaseHost = '34.101.142.207';
-$databaseName = 'test';
+$databaseName = 'CRUDsimple';
 $databaseUsername = 'root';
-$databasePassword = 'root';
+$databasePassword = 'asdfghjkl';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
  
