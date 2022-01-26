@@ -1,9 +1,9 @@
 <?php
-// $username = 'root';
-// $password = 'root';
-// $dbName = 'test';
-// $connectionName = getenv("bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server");
-// $socketDir = getenv('/var/lib/mysql/mysql.sock') ?: '/cloudsql';
+$username = 'root';
+$password = 'root';
+$dbName = 'test';
+$connectionName = getenv("bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server");
+$socketDir = getenv('/var/lib/mysql/mysql.sock') ?: '/cloudsql';
 
 // Connect using UNIX sockets
 $dsn = sprintf(
