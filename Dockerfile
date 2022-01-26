@@ -12,4 +12,4 @@ RUN chmod +x cloud_sql_proxy
 
 COPY . . /var/www/html/
 
-CMD ["sh", "-c", "./cloud_sql_proxy -instances=bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server=tcp:34.101.142.207:3306 & yarn start"]
+CMD ["sh", "-c", "./cloud_sql_proxy -instances=bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server & yarn start"]
