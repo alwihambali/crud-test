@@ -2,7 +2,7 @@ FROM php:7.3-apache
 
 #Install git and MySQL extensions for PHP
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git wget
 RUN docker-php-ext-install pdo pdo_mysql mysqli
 RUN a2enmod rewrite
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
