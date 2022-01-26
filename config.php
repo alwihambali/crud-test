@@ -1,26 +1,19 @@
 <?php
-// $username = 'root';
-// $password = 'root';
-// $dbName = 'test';
-// $connectionName = getenv("bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server");
-// $socketDir = getenv('/var/lib/mysql/mysql.sock') ?: '/cloudsql';
+// $username = 'your_db_user';
+// $password = 'yoursupersecretpassword';
+// $dbName = 'your_db_name';
+// $connectionName = getenv("INSTANCE_CONNECTION_NAME");
+// $socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
 
-// // Connect using UNIX sockets
-// $dsn = sprintf(
-//     'mysql:dbname=%s;unix_socket=%s/%s',
-//     $dbName,
-//     $socketDir,
-//     $connectionName
-// );
+// Connect using UNIX sockets
+$dsn = sprintf(
+    'mysql:dbname=%s;unix_socket=%s/%s',
+    $dbName,
+    $socketDir,
+    $connectionName
+);
 
-// // Connect to the database.
-// $conn = new PDO($dsn, $username, $password, $conn_config);
-
-$databaseHost = '34.101.142.207';
-$databaseName = 'CRUDsimple';
-$databaseUsername = 'root';
-$databasePassword = 'asdfghjkl';
-
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+// Connect to the database.
+$conn = new PDO($dsn, $username, $password, $conn_config);
  
 ?>
