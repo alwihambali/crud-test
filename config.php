@@ -1,18 +1,23 @@
 <?php
-$username = 'root';
-$password = 'asdfghjkl';
-$dbName = 'test';
-$connectionName = getenv("bss-sandbox-env-1:asia-southeast2:bss-dev-mysql-server");
-$socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
+/*
+// mysql_connect("database-host", "username", "password")
+$conn = mysql_connect("localhost","root","root") 
+			or die("cannot connected");
 
-// Connect using UNIX sockets
-$dsn = sprintf(
-    'mysql:dbname=%s;unix_socket=%s/%s',
-    $dbName,
-    $socketDir,
-    $connectionName
-);
+// mysql_select_db("database-name", "connection-link-identifier")
+@mysql_select_db("test",$conn);
+*/
 
-// Connect to the database.
-$conn = new PDO($dsn, $username, $password, $conn_config);
+/**
+ * mysql_connect is deprecated
+ * using mysqli_connect instead
+ */
+
+$databaseHost = 'localhost';
+$databaseName = 'test';
+$databaseUsername = 'root';
+$databasePassword = 'root';
+
+$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
+ 
 ?>
